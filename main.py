@@ -7,16 +7,13 @@ def main():
     i = 0
     
     while total <= 100:
-        scheisse = random.randint(0, 100)
-        numbers[i] = 0
-        while numbers[i] != scheisse:
-            numbers[i] += 1
+        numbers.append(random.randint(0,100))
         print(numbers[i])
-        scheisse = 0
         total += numbers[i]
-        i += 1
         if total > 100:
-            total - numbers
+            total -= numbers[i]
+            break
+        i += 1
     print(total)
 
     print(f'The random values are {numbers}')
